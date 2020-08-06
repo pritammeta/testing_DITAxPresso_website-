@@ -1,0 +1,17 @@
+/*
+======================================
+  * CSS FIX CONTENT *  
+======================================
+*/
+
+/*Overlay opdacity*/
+.overlay-primary-dark:after, .overlay-primary:after {
+    opacity: 0.5 !important;
+}
+
+/*State Transition*/
+
+/*Banner Overlay opdacity*/
+.dlab-bnr-inr.dlab-bnr-inr-sm.overlay-primary:after {
+  opacity: 0 !important;
+}

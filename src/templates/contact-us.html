@@ -1,0 +1,197 @@
+<style>
+    /* alert message box */
+    .alert {
+        margin-top: 20px;
+    }
+
+    .alert-dismissible .close {
+        padding: 0.75rem 1.00rem;
+    }
+
+    .close {
+        font-size: 30px;
+        font-weight: 600;
+    }
+</style>
+
+<body id="bg" ng-controller="contactusController">
+    <div class="page-wraper">
+    <div id="loading-area"><div class="la-anim-10"></div></div>
+    
+        <!-- Content -->
+        <div class="page-content bg-white">
+            <!-- inner page banner -->
+            <div class="dlab-bnr-inr dlab-bnr-inr-sm overlay-primary bg-pt" style="background-image:url(images/banner/contact-us.png);">
+                <div class="container">
+                    <div class="dlab-bnr-inr-entry">
+                        <h1 class="text-white">Contact Us</h1>
+                        <!-- Breadcrumb row -->
+                        <div class="breadcrumb-row">
+                            <ul class="list-inline">
+                                <li><a ui-sref="main.home">Home</a></li>
+                                <li>Contact Us</li>
+                            </ul>
+                        </div>
+                        <!-- Breadcrumb row END -->
+                    </div>
+                </div>
+            </div>
+            <!-- inner page banner END -->
+            <!-- contact area -->
+            <div class="content-block">
+    
+                <!-- Contact Us -->
+                <div class="section-full bg-white content-inner-2" style="background-image:url(images/background/bg1.png);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-xs-4">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-6 m-b30 wow fadeIn" data-wow-delay="0.8s">
+                                        <div class="icon-bx-wraper bx-style-1 p-a20 radius-sm">
+                                            <div class="icon-content">
+                                                <h5 class="dlab-tilte">
+                                                    <span class="icon-sm text-primary text-left"><i class="ti-mobile"></i></span> 
+                                                    Phone Numbers
+                                                </h5>
+                                                <h6 class="m-b15 font-weight-400"> For Training</h6>
+                                                <p>+91-986-080-0135</p>
+                                                <h6 class="m-b15 font-weight-400"> For Consulting & Services</h6>
+                                                <p>+91-839 090 5726</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-6 m-b30 wow fadeIn" data-wow-delay="0.6s">
+                                        <div class="icon-bx-wraper bx-style-1 p-a20 radius-sm">
+                                            <div class="icon-content">
+                                                <h5 class="dlab-tilte">
+                                                    <span class="icon-sm text-primary text-left"><i class="ti-email"></i></span> 
+                                                    E-mail
+                                                </h5>                                                
+                                                <p class="m-b0">training@metapercept.com</p>
+                                                <p class="m-b0">info@metapercept.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-6 m-b30 wow fadeIn" data-wow-delay="0.4s">
+                                        <div class="icon-bx-wraper bx-style-1 p-a20 radius-sm">
+                                            <div class="icon-content">
+                                                <h5 class="dlab-tilte">
+                                                    <span class="icon-sm text-primary text-left"><i class="ti-location-pin"></i></span> 
+                                                    Company Address
+                                                </h5>
+                                                <p>Office 501, Sohrab Hall, Opposite Jahangir Hospital Pune, Maharashtra India Pin – 411001 </p>
+                                                <!-- <h6 class="m-b15 font-weight-400"><i class="ti-alarm-clock"></i> Office Hours</h6>
+                                                <p class="m-b0">Monday-Friday:10:00 am to 6:00 pm</p>
+                                                <p>Closed on Saturday & Sunday</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-xs-8">
+                                <form class="inquiry-form wow fadeInUp dzForm" data-wow-delay="0.2s" ng-submit="formsubmit(ContactUsForm.$valid)" name="ContactUsForm" style="margin-top: -5px;">
+                                <div class="dzFormMsg"></div>
+                                <h3 class="box-title m-t0 m-b10">We Would Love to Hear from You  <span class="bg-primary"></span></h3>
+                                <p>Whether it’s about our services, the solutions we provide, our consultation, the details of our training programs or to request a demo, we are here to answer all your questions.</p>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="ti-user text-primary"></i></span>
+                                                    <input name="dzName" type="text" ng-model="contactName" required class="form-control" placeholder="First Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="ti-mobile text-primary"></i></span>
+                                                    <input name="dzOther[Phone]" type="text" ng-model="contactNumber" required class="form-control" placeholder="Phone">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <div class="input-group"> 
+                                                    <span class="input-group-addon"><i class="ti-email text-primary"></i></span>
+                                                    <input name="dzEmail" type="email" ng-model="contactEmail" class="form-control" required  placeholder="Your Email Id" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <div class="input-group"> 
+                                                    <span class="input-group-addon"><i class="ti-check-box text-primary"></i></span>
+                                                    <input name="dzSubject" type="text" ng-model="contactSubject" class="form-control" required  placeholder="Your Subject" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="ti-agenda text-primary"></i></span>
+                                                    <textarea name="dzMessage" rows="4" ng-model="contactMessage" class="form-control" required placeholder="Tell us about your requirements"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="g-recaptcha" data-sitekey="6LdOuPYUAAAAAN6IaqcfYG7fp7TFsOsjJW2MIu66" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                                    <input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <button name="submit" type="submit" value="Submit" ng-disabled="ContactUsForm.$invalid" class="site-button button-lg" style="margin-right: 10px;"> <span>Submit</span> </button>
+                                            <button name="submit" type="reset" value="Reset" class="site-button button-lg"> <span>Reset</span> </button>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div ng-if="responseSuccessMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+                                                <h4 class="alert-heading">Success!</h4>
+                                                <p>{{responseSuccessMessage}}</p>        
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>                              
+            
+                                            <div ng-if="responseErrorMessage" class="alert alert-warning  alert-dismissible fade show" role="alert">
+                                                <h4 class="alert-heading">Oops!</h4>
+                                                <p>{{responseErrorMessage}}</p>        
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Us End -->
+
+                <div class="section-full add-to-call bg-primary p-tb30">
+                    <div class="container">
+                        <div class="d-lg-flex d-sm-block justify-content-between align-items-center">
+                            <h2 class="m-b10 m-t10 text-white">We are just a call away.</h2>
+                            <!-- <div><a href="#" class="site-button button-md white">Learn More</a></div> -->
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <!-- Content END-->
+    
+        <button class="scroltop fa fa-chevron-up"></button>
+    </div>
+        
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+</body>
+        
+        
+    
+    

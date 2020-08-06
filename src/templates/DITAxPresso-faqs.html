@@ -1,0 +1,607 @@
+<style>
+    .overlay-primary:after {
+        opacity: 0.5;
+    }
+
+    .tillustration-section-n::after {
+        content: '';
+        position: absolute !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 684px !important;
+        background-image: url(images/products/illustration-section-01.svg) !important;
+        background-repeat: no-repeat !important;
+        background-size: auto !important;
+        left: 50% !important;
+        top: 0 !important;
+        background-position: center top !important;
+        transform: translate(-50%) !important;
+    }
+
+    @media (min-width: 1200px){
+    .section-rotate {
+        padding-top: 8rem;
+        /* padding-bottom: 12rem; */
+    }}
+    @media (min-width: 992px){
+    .section-rotate {
+        min-height: 480px;
+        padding-top: 8rem;
+        /* padding-bottom: 8rem; */
+    }}
+    .section-rotate {
+        padding-top: 4rem;
+        /* padding-bottom: 4rem; */
+        /* overflow: hidden; */
+        background: transparent;
+        position: relative;
+        z-index: 0;
+    }
+
+    .section-rotate .section-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+
+    .middle {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .right-0 {
+        right: 0;
+    }
+    .pt-7, .py-7 {
+        padding-top: 6rem !important;
+    }
+    .position-absolute {
+        position: absolute !important;
+    }
+
+    .bg-size--contain {
+        background-size: contain;
+    }
+    .bg-absolute-cover {
+        background-repeat: no-repeat;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: 100%; */
+        /* z-index: 100; */
+    }
+
+    .tillustration-section-n::after {
+        content: '';
+        position: absolute !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 684px !important;
+        background-image: url(images/products/illustration-section-01.svg) !important;
+        background-repeat: no-repeat !important;
+        background-size: auto !important;
+        left: 50% !important;
+        top: 0 !important;
+        background-position: center top !important;
+        transform: translate(-50%) !important;
+    }
+
+    .tillustration-section-n::after {
+        content: '';
+        position: absolute !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 684px !important;
+        background-image: url(images/products/illustration-section-01.svg) !important;
+        background-repeat: no-repeat !important;
+        background-size: auto !important;
+        left: 50% !important;
+        top: 0 !important;
+        background-position: center top !important;
+        transform: translate(-50%) !important;
+    }
+
+    element.style {
+        height: 1000px;
+    }
+
+    .bg-absolute-cover svg {
+        height: 1000px;
+        pointer-events: none;
+    }
+    svg:not(:root) {
+        overflow: hidden;
+    }
+    svg {
+        vertical-align: middle;
+        overflow: hidden;
+        width: 100%;
+    }
+    svg {
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .fill-blue {
+    fill: #2684FF !important;
+    }
+
+    .stroke-blue {
+    stroke: #2684FF !important;
+    }
+
+    .fill-indigo {
+    fill: #6e00ff !important;
+    }
+
+    .stroke-indigo {
+    stroke: #6e00ff !important;
+    }
+
+    .fill-purple {
+    fill: #510FA8 !important;
+    }
+
+    .stroke-purple {
+    stroke: #510FA8 !important;
+    }
+
+    .fill-pink {
+    fill: #f074ad !important;
+    }
+
+    .stroke-pink {
+    stroke: #f074ad !important;
+    }
+
+    .fill-red {
+    fill: #FF5630 !important;
+    }
+
+    .stroke-red {
+    stroke: #FF5630 !important;
+    }
+
+    .fill-orange {
+    fill: #FFAB00 !important;
+    }
+
+    .stroke-orange {
+    stroke: #FFAB00 !important;
+    }
+
+    .fill-yellow {
+    fill: #ffcc00 !important;
+    }
+
+    .stroke-yellow {
+    stroke: #ffcc00 !important;
+    }
+
+    .fill-green {
+    fill: #36B37E !important;
+    }
+
+    .stroke-green {
+    stroke: #36B37E !important;
+    }
+
+    .fill-teal {
+    fill: #00B8D9 !important;
+    }
+
+    .stroke-teal {
+    stroke: #00B8D9 !important;
+    }
+
+    .fill-cyan {
+    fill: #4bd6e5 !important;
+    }
+
+    .stroke-cyan {
+    stroke: #4bd6e5 !important;
+    }
+
+    .fill-white {
+    fill: #FFF !important;
+    }
+
+    .stroke-white {
+    stroke: #FFF !important;
+    }
+
+    .fill-gray {
+    fill: #C0CCDA !important;
+    }
+
+    .stroke-gray {
+    stroke: #C0CCDA !important;
+    }
+
+    .fill-gray-dark {
+    fill: #3C4858 !important;
+    }
+
+    .stroke-gray-dark {
+    stroke: #3C4858 !important;
+    }
+
+    /********* card expand *********/
+    #expend {
+    display:none;  
+    }
+
+    #expend + .smalldesc {
+    max-height:52px;
+    overflow:hidden;
+    transition:all .3s ease;
+    }
+
+    #expend:checked + .smalldesc {
+    max-height:250px;  
+    }
+
+    /* dxp */
+    #dxp {
+    display:none;  
+    }
+
+    #dxp + .smalldesc {
+    max-height:52px;
+    overflow:hidden;
+    transition:all .3s ease;
+    }
+
+    #dxp:checked + .smalldesc {
+    max-height:250px;  
+    }
+
+    /* adobetcs */
+    #adobetcs {
+    display:none;  
+    }
+
+    #adobetcs + .smalldesc {
+    max-height:52px;
+    overflow:hidden;
+    transition:all .3s ease;
+    }
+
+    #adobetcs:checked + .smalldesc {
+    max-height:250px;  
+    }
+
+    /* oxygen */
+    #oxygen {
+    display:none;  
+    }
+
+    #oxygen + .smalldesc {
+    max-height:52px;
+    overflow:hidden;
+    transition:all .3s ease;
+    }
+
+    #oxygen:checked + .smalldesc {
+    max-height:250px;  
+    }
+
+    /* easydita */
+    #easydita {
+    display:none;  
+    }
+
+    #easydita + .smalldesc {
+    max-height:52px;
+    overflow:hidden;
+    transition:all .3s ease;
+    }
+
+    #easydita:checked + .smalldesc {
+    max-height:250px;  
+    }
+
+    /* ditatoo */
+    #ditatoo {
+    display:none;  
+    }
+
+    #ditatoo + .smalldesc {
+    max-height:52px;
+    overflow:hidden;
+    transition:all .3s ease;
+    }
+
+    #ditatoo:checked + .smalldesc {
+    max-height:250px;  
+    }
+
+    /* altova */
+    #altova {
+    display:none;  
+    }
+
+    #altova + .smalldesc {
+    max-height:52px;
+    overflow:hidden;
+    transition:all .3s ease;
+    }
+
+    #altova:checked + .smalldesc {
+    max-height:250px;  
+    }
+
+    label {
+    color:blue;
+    text-decoration:underline;
+    cursor:pointer;
+    }
+
+    label:hover {
+    text-decoration:none;  
+    }
+
+    /* remove visited color */
+    a.change_hover_color:link { color:#6f6f6f; text-decoration:none; font-weight:normal; }
+    a.change_hover_color:visited { color: #6f6f6f; text-decoration:none; font-weight:normal; }
+    a.change_hover_color:hover { color: #6f6f6f; text-decoration:none; font-weight:normal; }
+    a.change_hover_color:active { color: #6f6f6f; text-decoration:none; font-weight:normal; }
+    /********* card expand *********/
+
+    .faq-1 .acod-title a {
+        padding: 20px 38px;
+    }
+</style>
+
+<body id="bg">
+<div class="page-wraper">
+<div id="loading-area"><div class="la-anim-10"></div></div>
+
+<!-- Content -->
+<div class="page-content bg-white">
+
+
+    <section class="header-1 section-rotate bg-section-secondary" data-offset-top="#header-main" style="padding-top: 20px;min-height: 0px;">
+        <div class="section-inner " style="background-color: #101641 !important;">
+          <!-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+          </video> -->
+          <!-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="assets/video/DITAxPresso - Publishing and styling in DITA super easy.mp4" type="video/mp4">
+          </video> -->
+        </div>
+
+        <!-- SVG background -->
+        <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
+          <section class="rc np sh ir r tillustration-section-n"></section>
+            <figure class="w-100 d-none d-lg-block">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 820" class="injected-svg svg-inject" style="height: 1000px;">
+                    <path class="fill-cyan" d="M 153.37 455.293 L 143.264 444.989 C 142.269 443.976 142.269 442.371 143.264 441.358 L 153.37 431.055 C 154.364 430.042 155.938 430.042 156.932 431.055 L 167.038 441.358 C 168.032 442.371 168.032 443.976 167.038 444.989 L 156.932 455.293 C 156.02 456.306 154.364 456.306 153.37 455.293 Z" style=""></path>
+                    <circle class="fill-pink" cx="1184.025" cy="85.335" r="9.723" style=""></circle>
+                    <circle class="fill-yellow" stroke-width="3" stroke-miterlimit="10" cx="320.504" cy="209.51" r="12.587" style=""></circle>
+                    <path class="fill-blue" d="M 42.564 -16.417 C 43.206 -18.074 44.682 -19.262 46.438 -19.535 L 62.879 -22.089 C 64.634 -22.362 66.401 -21.677 67.515 -20.294 L 77.948 -7.333 C 79.062 -5.949 79.353 -4.076 78.712 -2.419 L 72.703 13.096 C 72.061 14.753 70.585 15.941 68.829 16.215 L 52.388 18.769 C 50.633 19.042 48.865 18.358 47.752 16.973 L 37.319 4.012 C 36.205 2.628 35.914 0.755 36.555 -0.902 L 42.564 -16.417 Z" style=""></path>
+                    <path class="fill-pink" d="M 1128.161 586.512 C 1128.462 585.735 1129.154 585.178 1129.977 585.05 L 1137.684 583.853 C 1138.506 583.725 1139.335 584.046 1139.857 584.695 L 1144.747 590.77 C 1145.269 591.419 1145.406 592.297 1145.105 593.073 L 1142.289 600.346 C 1141.988 601.123 1141.296 601.68 1140.473 601.808 L 1132.767 603.005 C 1131.944 603.133 1131.115 602.812 1130.593 602.163 L 1125.703 596.088 C 1125.181 595.439 1125.044 594.561 1125.345 593.785 L 1128.161 586.512 Z" style=""></path>
+                    <path class="fill-purple" d="M 109.272 171.631 C 109.643 170.672 110.497 169.986 111.512 169.828 L 121.017 168.352 C 122.032 168.193 123.054 168.59 123.698 169.389 L 129.729 176.883 C 130.373 177.683 130.542 178.766 130.171 179.723 L 126.697 188.693 C 126.326 189.651 125.473 190.339 124.458 190.497 L 114.952 191.973 C 113.937 192.131 112.916 191.736 112.272 190.935 L 106.24 183.442 C 105.596 182.641 105.428 181.559 105.798 180.601 L 109.272 171.631 Z" style=""></path>
+                    <path class="fill-purple" d="M 258.215 770.571 C 258.563 769.674 259.363 769.03 260.314 768.882 L 269.221 767.499 C 270.171 767.351 271.129 767.722 271.732 768.471 L 277.384 775.492 C 277.988 776.243 278.146 777.257 277.798 778.155 L 274.543 786.559 C 274.195 787.457 273.395 788.101 272.444 788.249 L 263.538 789.633 C 262.587 789.781 261.629 789.41 261.026 788.66 L 255.374 781.639 C 254.771 780.889 254.613 779.874 254.96 778.976 L 258.215 770.571 Z" style=""></path>
+                    <circle class="fill-cyan" stroke-width="3" stroke-miterlimit="10" cx="730.584" cy="767.881" r="9.997" style=""></circle>
+                    <path class="fill-purple" d="M 1390.234 263.204 C 1390.491 262.543 1391.08 262.067 1391.782 261.958 L 1398.352 260.938 C 1399.053 260.829 1399.759 261.103 1400.204 261.655 L 1404.373 266.834 C 1404.818 267.387 1404.934 268.136 1404.678 268.798 L 1402.277 274.997 C 1402.021 275.659 1401.43 276.134 1400.729 276.244 L 1394.16 277.265 C 1393.459 277.373 1392.752 277.1 1392.307 276.547 L 1388.138 271.368 C 1387.693 270.815 1387.577 270.066 1387.833 269.404 L 1390.234 263.204 Z" style=""></path>
+                </svg>
+            </figure>
+        </div>
+        <!-- Hero container -->
+        <div class="container py-5 pt-lg-6 d-flex align-items-center position-relative zindex-100">
+            <div class="col">
+                <div class="row">
+                    <div class="col-lg-4 text-center text-lg-left">
+                        <div>
+                          <div class="py-4 mb-3">
+                            <img src="images/products/companylogo/dxp_lightblue_big.svg" width="300">                       
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-8 ">
+                        <h2 class="text-white">
+                            <span class="display-4 font-weight-light">See it. Love it</span>
+                            <span class="d-block">DITAxPresso <strong class="font-weight-light">made ease documentation.</strong></span>
+                        </h2>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sct-page-examples" class="slice bg-section-secondary" style="margin-top:0px !important; padding-top:0px !important;margin-bottom:0px !important; padding-bottom:0px !important;">
+            
+    <!-- contact area -->
+    <div class="content-block">
+
+        <!-- Your Faq -->
+        <div class="section-full bg-blue-light content-inner bg-img-fix" style="background-image:url(images/background/bg15.jpg); background-size:cover;">
+            <div class="container">
+                <div class="section-head text-black text-center">
+                    <h3>FAQs</h3>
+                    <div class="dlab-separator bg-primary"></div>
+                    <p>You can visit our FAQ section that may have a few answers to the questions you are looking for.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 m-b30">
+                        <div class="dlab-accordion faq-1 box-sort-in m-b30" id="accordion1">
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse" data-target="#faq1" class="collapsed" data-parent="#faq1" style="cursor: pointer;">
+                                        1. Can we customize DITA maps? How can we work with DITA Maps ?</a> </h6>
+                                </div>
+                                <div id="faq1" class="acod-body collapse">
+                                    <div class="acod-content">Yes, you can customize the DITA maps in DITAxPresso. DITAxPresso will create a copy of your imported DITA maps and allow you to restructure the map copy.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse" data-target="#faq2" class="collapsed" data-parent="#faq2" style="cursor: pointer;">
+                                        2. We have DITA maps prepared in other tools. Can we import them to DITAxPresso ?</a> </h6>
+                                </div>
+                                <div id="faq2" class="acod-body collapse">
+                                    <div class="acod-content">Yes, DITAxPresso lets you work easily with imported DITA Maps. As long as they have a .ditamap filetype, they can be used in DITAxPresso.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq3" class="collapsed"  data-parent="#faq3" style="cursor: pointer;">
+                                        3. Can I create DITA topics from scratch ? </a> </h6>
+                                </div>
+                                <div id="faq3" class="acod-body collapse">
+                                    <div class="acod-content">The current version does not support the creation of new DITA topics. Although we are introducing this feature in DITAxPresso version 3.0 soon.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq4" class="collapsed"  data-parent="#faq4" style="cursor: pointer;">
+                                        4. How can I buy this product ? </a> </h6>
+                                </div>
+                                <div id="faq4" class="acod-body collapse">
+                                    <div class="acod-content">To buy the product, please contact our sales team.Please leave your contact details in the messenger below.<br>Or<br> <b>Email us:</b> products@metapercept.com</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq5" class="collapsed"  data-parent="#faq5" style="cursor: pointer;">
+                                        5. Can I get a product demo ?</a> </h6>
+                                </div>
+                                <div id="faq5" class="acod-body collapse">
+                                    <div class="acod-content">Yes, you can get a product demo from our sales team. Please leave your contact details in the messenger below.<br>Or<br> <b>Email us:</b> products@metapercept.com  <br>Our representative will get back to you.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq6" class="collapsed"  data-parent="#faq6" style="cursor: pointer;">
+                                        6. Where can I get product support after buying ?</a> </h6>
+                                </div>
+                                <div id="faq6" class="acod-body collapse">
+                                    <div class="acod-content">For any product related query, you can access our online product help throughout; <br>Or<br> drop a message in the messenger below.<br> <b>Email us:</b> products@metapercept.com  <br> Our technical support team will get back to you.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq7" class="collapsed"  data-parent="#faq7" style="cursor: pointer;">
+                                        7. Is there any trial version for DITAxPresso ?</a> </h6>
+                                </div>
+                                <div id="faq7" class="acod-body collapse">
+                                    <div class="acod-content">We do not have a trial version of the product, but our sales team will be more than happy to give you a product demo and demonstrate all the features.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 m-b30">
+                        <div class="dlab-accordion faq-1 box-sort-in m-b30" id="accordion1">
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse" data-target="#faq8" class="collapsed" data-parent="#faq8" style="cursor: pointer;">
+                                        8. Can I integrate DITAxPresso with any DITA CMS ?</a> </h6>
+                                </div>
+                                <div id="faq8" class="acod-body collapse">
+                                    <div class="acod-content">The current version does not support CMS integration. In DITAxPresso version 3.0, you will be able to integrate with Oxygen XML, GitHub, and other cloud-based tools.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse" data-target="#faq9" class="collapsed" data-parent="#faq9" style="cursor: pointer;">
+                                        9. We need a customized template with our branding. Where will we get it ?</a> </h6>
+                                </div>
+                                <div id="faq9" class="acod-body collapse">
+                                    <div class="acod-content">For publishing the content, you get a few default templates. If you require a customized template for your brand, we can provide you with them for an additional cost.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq10" class="collapsed"  data-parent="#faq10" style="cursor: pointer;">
+                                        10. I don’t have DITA-XML knowledge. Can I still use DITAxPresso ? </a> </h6>
+                                </div>
+                                <div id="faq10" class="acod-body collapse">
+                                    <div class="acod-content">Yes, you can use DITAxPresso and use all the features without any prior knowledge of DITA-XML. Our easy-to-use features allow even novice users to get the full benefit of DITA content.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq11" class="collapsed"  data-parent="#faq11" style="cursor: pointer;">
+                                        11. Can we edit multiple DITA maps at the same time ? </a> </h6>
+                                </div>
+                                <div id="faq11" class="acod-body collapse">
+                                    <div class="acod-content">Yes, multiple maps can be opened and edited at the same time. Although, please remember that you will be working on a copy of the map for publishing your content.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq12" class="collapsed"  data-parent="#faq12" style="cursor: pointer;">
+                                        12. Is the HTML output responsive ?</a> </h6>
+                                </div>
+                                <div id="faq12" class="acod-body collapse">
+                                    <div class="acod-content">Yes, depending on the plugin selected, you can get a responsive HTML output for your document. Please check your plugin before use. Or contact us for a customized plugin.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq13" class="collapsed"  data-parent="#faq13" style="cursor: pointer;">
+                                        13. What are the supported output formats ?</a> </h6>
+                                </div>
+                                <div id="faq13" class="acod-body collapse">
+                                    <div class="acod-content">The output formats supported in DITAxPresso are:<br><ul style="margin-top: 10; margin-left: 40px; margin-bottom: 0px;"><li>PDF</li><li>Word</li><li>HTML</li><li>Markdown</li></ul><br> <b>Email us:</b> products@metapercept.com  <br>Our representative will get back to you.</div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="acod-head">
+                                    <h6 class="acod-title"> 
+                                        <a data-toggle="collapse"  data-target="#faq14" class="collapsed"  data-parent="#faq14" style="cursor: pointer;">
+                                        14. Can we create different styles in DITAxPresso ?</a> </h6>
+                                </div>
+                                <div id="faq14" class="acod-body collapse">
+                                    <div class="acod-content">We provide templates to add styles to your content in DITAxPresso. Apart from the provided templates, we will be happy to provide you with customized plugins to fulfill your styling requirements. Contact us for customized plugins.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Your Faq End -->
+    
+        <div class="section-full add-to-call bg-primary p-tb30">
+            <div class="container">
+                <div class="d-lg-flex d-sm-block justify-content-between align-items-center">
+                    <h2 class="m-b10 m-t10 text-white">Get in touch to know more about our product.</h2>
+                    <!-- <div><a href="#" class="site-button button-md white">Learn More</a></div> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- contact area END -->
+</div>
+<!-- Content END-->
+
+<button class="scroltop fa fa-chevron-up"></button>
+</div>
+<script src="../js/dz.carousel.js"></script><!-- SORTCODE FUCTIONS  -->
+<script src="../js/custom.js"></script><!-- CUSTOM FUCTIONS  -->	
+
+</body>
+

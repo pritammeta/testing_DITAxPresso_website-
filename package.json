@@ -1,0 +1,32 @@
+{
+  "name": "metapercept-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "*"
+  },
+  "engines": {
+    "node": "^8 || ^10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metapercept/WebsiteMetapercept2020.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Jeet@metapercept.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metapercept/WebsiteMetapercept2020/issues"
+  },
+  "homepage": "https://github.com/metapercept/WebsiteMetapercept2020#readme",
+  "devDependencies": {
+    "static-pages-bundler": "^1.0.25"
+  }
+}
